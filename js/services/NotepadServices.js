@@ -12,7 +12,7 @@ app.factory('notepadServices', ['$http', 'locationServices', function($http, loc
         function pesquisarPor(nome, callback) {
             $http({
                 method:'GET',
-                url:'https://notepadsaas-fiap.herokuapp.com/nota/titulo' + nome
+                url:'https://notepadsaas-fiap.herokuapp.com/nota/titulo/' + nome
             }).then(function (data) {
                 if (callback) callback(data)
             });
